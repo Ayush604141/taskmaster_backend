@@ -1,0 +1,35 @@
+{
+  "name": "taskmaster_server",
+  "version": "1.0.0",
+  "description": "This is the server application for the task master application",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayush604141/taskmaster_backend.git"
+  },
+  "keywords": [
+    "Backend",
+    "TaskMaster",
+    "API",
+    "REST",
+    "Express",
+    "NodeJS"
+  ],
+  "author": "Ayush Shrivastav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayush604141/taskmaster_backend/issues"
+  },
+  "homepage": "https://github.com/Ayush604141/taskmaster_backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3"
+  }
+}
