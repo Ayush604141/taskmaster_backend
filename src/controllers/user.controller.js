@@ -9,6 +9,10 @@ export async function registerUser(req, res, next) {
       new APIError("Please provide email or username to register.", 401)
     );
   }
+  const checkUser = await User.findOne({ $or: { email, username } });
+  if (checkUser) {
+    return next(new APIError("User already exists, Please Login.", 400));
+  }
   try {
     const user = await User.create({ username, email, password });
     if (!user) {
