@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/Ayush604141/taskmaster_backend#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
