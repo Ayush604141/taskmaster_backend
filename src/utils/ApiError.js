@@ -1,10 +1,21 @@
 class APIError extends Error {
-  constructor(message, statusCode, payload) {
+  constructor(message, statusCode = 500, payload = {}) {
     super(message);
     this.name = this.constructor.name;
-    this.statusCode = statusCode || 500;
-    this.payload = payload || {};
+    this.statusCode = this.validateStatusCode(statusCode);
+    this.payload = payload;
     Error.captureStackTrace(this, this.constructor);
+  }
+
+  validateStatusCode(statusCode) {
+    if (
+      typeof statusCode !== "number" ||
+      statusCode < 400 ||
+      statusCode > 599
+    ) {
+      throw new Error("Invalid HTTP status code");
+    }
+    return statusCode;
   }
 
   toJSON() {
